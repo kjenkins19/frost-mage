@@ -1,0 +1,96 @@
+$images: "./images/";
+$primary-color: #074b73; //text white
+$primary-color-light: #4576a2; //text white
+$primary-color-dark: #002447; //text white
+$secondary-color: #b0bec5; //text black
+$secondary-color-light: #e2f1f8; //text black
+$secondary-color-dark: #808e95; //text black
+
+/*
+font-family: 'Lobster', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Spectral', serif;
+*/
+
+@mixin tablet() {
+	@media screen and (min-width: 700px) {
+		@content;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.slide {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 60vh;
+	padding: 20px;
+	text-align: center;
+
+	&:nth-of-type(even) {
+		background-color: white;
+		color: $primary-color;
+		a {
+			color: $primary-color-dark;
+		}
+	}
+	&:nth-of-type(odd) {
+		color: white;
+		a {
+			color: white;
+		}
+	}
+
+	&:nth-of-type(1) {
+		background-attachment: fixed;
+		background-color: black;
+		background-image: url($images + "bluestone-2015-dark.jpg");
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&:nth-of-type(3), &:nth-of-type(5) {
+		background-color: $primary-color-light;
+	}
+
+	@include tablet {
+		padding: 40px;
+	}
+}
+
+.main-title {
+	font-family: 'Lobster', cursive;
+	font-size: (50 / 16)rem;
+	text-shadow: 0 0 5px black;
+
+	@include tablet() {
+		font-size: (70 / 16)rem;
+	}
+}
+
+.dates, .where {
+	margin-top: 20px;
+	text-shadow: 0 0 5px black;
+
+	@include tablet() {
+		font-size: (30 / 16)rem;
+	}
+}
+
+.section-title {
+	font-family: 'Spectral', serif;
+	font-size: (30 / 16)rem;
+	line-height: 1.3em;
+}
+
+.copy {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+}

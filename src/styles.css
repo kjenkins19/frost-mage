@@ -1,0 +1,65 @@
+/*
+font-family: 'Lobster', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Spectral', serif;
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.slide {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 20px;
+  text-align: center; }
+  .slide:nth-of-type(even) {
+    background-color: white;
+    color: #074b73; }
+    .slide:nth-of-type(even) a {
+      color: #002447; }
+  .slide:nth-of-type(odd) {
+    color: white; }
+    .slide:nth-of-type(odd) a {
+      color: white; }
+  .slide:nth-of-type(1) {
+    background-attachment: fixed;
+    background-color: black;
+    background-image: url("./images/bluestone-2015-dark.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .slide:nth-of-type(3), .slide:nth-of-type(5) {
+    background-color: #4576a2; }
+  @media screen and (min-width: 700px) {
+    .slide {
+      padding: 40px; } }
+
+.main-title {
+  font-family: 'Lobster', cursive;
+  font-size: 3.125 rem;
+  text-shadow: 0 0 5px black; }
+  @media screen and (min-width: 700px) {
+    .main-title {
+      font-size: 4.375 rem; } }
+
+.dates, .where {
+  margin-top: 20px;
+  text-shadow: 0 0 5px black; }
+  @media screen and (min-width: 700px) {
+    .dates, .where {
+      font-size: 1.875 rem; } }
+
+.section-title {
+  font-family: 'Spectral', serif;
+  font-size: 1.875 rem;
+  line-height: 1.3em; }
+
+.copy {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 20px; }
+
+/*# sourceMappingURL=styles.css.map */
