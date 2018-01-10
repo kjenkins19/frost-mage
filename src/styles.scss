@@ -1,10 +1,4 @@
-$images: "./images/";
-$primary-color: #074b73; //text white
-$primary-color-light: #4576a2; //text white
-$primary-color-dark: #002447; //text white
-$secondary-color: #b0bec5; //text black
-$secondary-color-light: #e2f1f8; //text black
-$secondary-color-dark: #808e95; //text black
+@import 'vars';
 
 /*
 font-family: 'Lobster', cursive;
@@ -22,6 +16,10 @@ font-family: 'Spectral', serif;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+a {
+	color: black;
 }
 
 .slide {

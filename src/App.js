@@ -7,12 +7,23 @@ import './App.css';
 import './styles.css';
 import {
 	BrowserRouter as Router,
-	Route,
-	Link
+	Route
 } from 'react-router-dom'
+import map from 'lodash/map'
 
 
 class App extends Component {
+	constructor(props) {
+		super(props);
+
+
+		this.state = { blogList: [
+			  { 'key': 1, 'title': 'blog 1', 'summary': 'test blog summary 1' },
+				{ 'key': 2,'title': 'blog 2', 'summary': 'test blog summary 2' },
+				{ 'key': 3,'title': 'blog 3', 'summary': 'test blog summary 3' },
+				{ 'key': 4,'title': 'blog 4', 'summary': 'test blog summary 4' }
+			] };
+	}
 
 
 	render() {
@@ -26,10 +37,14 @@ class App extends Component {
 				<h2>human</h2>
 			</div>
 		);
+		const home = () => (
+			<div>
+				<h2>home</h2>
+			</div>
+		);
 
 
 		let page = window.location.pathname.split('/')[1];
-		console.log(window.location);
 		return (
 			<Router>
 				<div className="App">
@@ -37,16 +52,16 @@ class App extends Component {
 						<MainImage/>
 						<PrimaryMenu currentPage={page}/>
 					</header>
-					{/*<Route exact path="/" component={Home}/>*/}
+					<Route exact path="/" component={home}/>
 					<Route path="/dev" component={dev}/>
 					<Route path="/frost" component={Frost}/>
 					<Route path="/human" component={human}/>
-					<Blog/>
-					<Blog/>
-					<Blog/>
-					<Blog/>
-					<Blog/>
-					<Blog/>
+
+					{map(this.state.blogList, (blog) => {
+						return (
+							<Blog key={blog.key} title={blog.title} summary={blog.summary}/>
+						)
+					})}
 				</div>
 			</Router>
 		);

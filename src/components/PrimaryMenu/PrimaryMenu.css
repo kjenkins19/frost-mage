@@ -1,6 +1,18 @@
 .primary-menu {
-  display: flex;
   align-items: center;
-  justify-content: center; }
+  display: flex; }
+  .primary-menu > div {
+    flex-grow: 1;
+    min-width: 100% / 3;
+    text-align: center; }
+    .primary-menu > div > a {
+      background-color: #88ffff;
+      display: block;
+      font-weight: bold;
+      padding: 20px;
+      text-decoration: none; }
+      .primary-menu > div > a.active {
+        background-color: #0277bd;
+        color: white; }
 
 /*# sourceMappingURL=PrimaryMenu.css.map */

@@ -1,5 +1,24 @@
+@import '../../vars';
+
 .primary-menu {
-	display: flex;
 	align-items: center;
-	justify-content: center;
+	display: flex;
+	> div {
+		flex-grow: 1;
+		min-width: 100% / 3;
+		text-align: center;
+
+		> a {
+			background-color: $primary-color-light;
+			display: block;
+			font-weight: bold;
+			padding: 20px;
+			text-decoration: none;
+
+			&.active {
+				background-color: $secondary-color;
+				color: white;
+			}
+		}
+	}
 }

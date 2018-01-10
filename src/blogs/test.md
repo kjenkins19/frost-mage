@@ -4,6 +4,6 @@ date: 20180109
 status: Ready
 ---
 
-# Accordion
+# Test Blog
 
-Accordions are used to organize, hide and show information to the user.
+This a test blog to see if this is a viable option

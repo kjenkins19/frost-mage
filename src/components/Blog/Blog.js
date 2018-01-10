@@ -3,12 +3,10 @@ import './Blog.css';
 
 class Blog extends Component {
 	render() {
-		// console.log(this.props);
-		// console.log(window.location);
 		return (
 			<div className="blog">
-				<h2>Blog Title</h2>
-				<p>Lorem Impsum</p>
+				<h2>{this.props.title}</h2>
+				<p>{this.props.summary}</p>
 			</div>
 		);
 	}

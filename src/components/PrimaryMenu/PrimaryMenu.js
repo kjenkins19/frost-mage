@@ -1,19 +1,16 @@
 import React, {Component} from 'react';
 import './PrimaryMenu.css';
 import {
-	BrowserRouter as Router,
-	Route,
-	Link
+	NavLink
 } from 'react-router-dom'
 
 class PrimaryMenu extends Component {
 	render() {
-		console.log(this.props);
 		return (
 			<nav className="primary-menu">
-				<div><Link to="/dev">Tales of the IT Consultant</Link></div>
-				<div><Link to="/frost">Diaries of a frost mage</Link></div>
-				<div><Link to="/human">Reality Check</Link></div>
+				<div><NavLink to="/dev">Tales of the IT Consultant</NavLink></div>
+				<div><NavLink to="/frost">Diaries of a frost mage</NavLink></div>
+				<div><NavLink to="/human">Reality Check</NavLink></div>
 			</nav>
 		);
 	}
