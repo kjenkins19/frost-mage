@@ -7,8 +7,8 @@ import {
 class MainImage extends Component {
 	render() {
 		return (
-			<Link to="/">
-				<div className="main-image">&nbsp;</div>
+			<Link to="/" className="main-image">
+				{/*<div className="main-image">&nbsp;</div>*/}
 			</Link>
 		);
 	}
